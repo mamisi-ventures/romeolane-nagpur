@@ -22,8 +22,8 @@ var TIERS=[{n:"Silver",min:0},{n:"Gold",min:1000},{n:"Black",min:3000}];
 function tierIdx(name){for(var i=0;i<TIERS.length;i++)if(TIERS[i].n===name)return i;return 0}
 var SLOTS=["12:30 PM","1:30 PM","3:00 PM","5:00 PM","6:30 PM","7:30 PM","8:30 PM","9:30 PM","10:30 PM"];
 var PRIZES=[
-  {t:"A mocktail",c:"#8B1A2B"},{t:"10% off",c:"#1C1C1C"},{t:"50 points",c:"#6E1522"},{t:"A dessert",c:"#2D2A26"},
-  {t:"Next time",c:"#8B1A2B"},{t:"Bar snack",c:"#1C1C1C"},{t:"Priority entry",c:"#6E1522"},{t:"Double points",c:"#2D2A26"}
+  {t:"A mocktail",c:"#0F2C5F"},{t:"10% off",c:"#2F5AA8"},{t:"50 points",c:"#15356F"},{t:"A dessert",c:"#6170B0"},
+  {t:"Next time",c:"#0F2C5F"},{t:"Bar snack",c:"#2F5AA8"},{t:"Priority entry",c:"#15356F"},{t:"Double points",c:"#6170B0"}
 ];
 
 /* ---------- Supabase ---------- */
@@ -270,10 +270,10 @@ function drawWheel(){
   x.clearRect(0,0,c.width,c.height);
   for(var i=0;i<n;i++){
     x.beginPath();x.moveTo(r,r);x.arc(r,r,r-4,i*a-Math.PI/2,(i+1)*a-Math.PI/2);x.closePath();x.fillStyle=PRIZES[i].c;x.fill();
-    x.strokeStyle="#C9A84C";x.lineWidth=1.5;x.stroke();
-    x.save();x.translate(r,r);x.rotate(i*a+a/2-Math.PI/2);x.textAlign="right";x.fillStyle="#C9A84C";x.font="600 15px Montserrat, sans-serif";x.fillText(PRIZES[i].t.toUpperCase(),r-24,5);x.restore();
+    x.strokeStyle="rgba(255,255,255,.55)";x.lineWidth=1.5;x.stroke();
+    x.save();x.translate(r,r);x.rotate(i*a+a/2-Math.PI/2);x.textAlign="right";x.fillStyle="#FFFFFF";x.font="600 15px Montserrat, sans-serif";x.fillText(PRIZES[i].t.toUpperCase(),r-24,5);x.restore();
   }
-  x.beginPath();x.arc(r,r,r-3,0,2*Math.PI);x.strokeStyle="#C9A84C";x.lineWidth=4;x.stroke();
+  x.beginPath();x.arc(r,r,r-3,0,2*Math.PI);x.strokeStyle="#0F2C5F";x.lineWidth=4;x.stroke();
 }
 drawWheel();
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(drawWheel);
@@ -295,11 +295,11 @@ var QS=[
   {q:"And the spirit?",o:[["Gin","Botanical and crisp",{fizz:1}],["Whisky","Warm and woody",{smooth:2}],["Tequila or rum","Sun and warmth",{bold:1,fruit:1}],["None at all","Every flavour, no spirit",{zero:3}]]}
 ];
 var RES={
-  fizz:{n:"A Sundowner Spritz",d:"Ask for a citrus gin spritz, lengthened with bubbles and finished with a twist. Bright, and best as the sky turns.",c:"#C9A84C"},
-  smooth:{n:"A Balcony Old Fashioned",d:"A stirred whisky drink with a smoked edge and orange oils, over one large cube. Made to be taken slowly.",c:"#A8893C"},
-  bold:{n:"A Lane Margarita",d:"Tequila, fresh lime and a chilli-salt rim. Sharp and assured, for when the room comes alive.",c:"#8B1A2B"},
-  fruit:{n:"A Juliet Sour",d:"Berries and rose, shaken to a silken foam. Composed, and quietly persuasive.",c:"#8B1A2B"},
-  zero:{n:"A Rooftop Cooler",d:"Fresh fruit, herbs and soda, built with the same care as any cocktail. Without the spirit.",c:"#A8893C"}
+  fizz:{n:"A Sundowner Spritz",d:"Ask for a citrus gin spritz, lengthened with bubbles and finished with a twist. Bright, and best as the sky turns.",c:"#8FA8DE"},
+  smooth:{n:"A Balcony Old Fashioned",d:"A stirred whisky drink with a smoked edge and orange oils, over one large cube. Made to be taken slowly.",c:"#6170B0"},
+  bold:{n:"A Lane Margarita",d:"Tequila, fresh lime and a chilli-salt rim. Sharp and assured, for when the room comes alive.",c:"#2F5AA8"},
+  fruit:{n:"A Juliet Sour",d:"Berries and rose, shaken to a silken foam. Composed, and quietly persuasive.",c:"#8F9BD6"},
+  zero:{n:"A Rooftop Cooler",d:"Fresh fruit, herbs and soda, built with the same care as any cocktail. Without the spirit.",c:"#8FA8DE"}
 };
 var qi=0,score={};
 function renderQuiz(){
@@ -311,7 +311,7 @@ function renderQuiz(){
     box.querySelector("h3").textContent=r.n;box.querySelector("p.muted").textContent=r.d;
     $("qAgain").onclick=function(){qi=0;score={};renderQuiz()};return;
   }
-  var lvl=[0,22,44][qi];liq.setAttribute("y",String(110-lvl));liq.setAttribute("height",String(lvl));liq.setAttribute("fill","#8B1A2B");
+  var lvl=[0,22,44][qi];liq.setAttribute("y",String(110-lvl));liq.setAttribute("height",String(lvl));liq.setAttribute("fill","#2F5AA8");
   var q=QS[qi];box.innerHTML='<div class="q"><span class="qstep">Question '+(qi+1)+' of '+QS.length+'</span><h3></h3><div class="opts"></div></div>';
   box.querySelector("h3").textContent=q.q;
   q.o.forEach(function(o){var b=document.createElement("button");b.type="button";b.innerHTML="<b></b><small></small>";b.querySelector("b").textContent=o[0];b.querySelector("small").textContent=o[1];
