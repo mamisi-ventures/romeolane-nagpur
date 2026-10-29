@@ -19,6 +19,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="application-name" content="Romeo Lane">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Romeo Lane">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,700&family=Montserrat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap">
@@ -1016,6 +1022,7 @@ footer .legal strong{color:var(--fg);font-weight:500}
       <strong>Mamisi Ventures Private Limited</strong>
       <span>© <span id="yr">2026</span> Mamisi Ventures Private Limited. All rights reserved.</span>
       <span style="font-style:italic">Please drink responsibly. Lane Club terms apply.</span>
+      <a href="privacy.html" style="color:var(--gold-muted);font-size:12px">Privacy policy</a>
       <a href="#staff" style="color:var(--gold-muted);font-size:12px">Staff sign-in</a>
     </div>
   </div>
@@ -1032,5 +1039,6 @@ footer .legal strong{color:var(--fg);font-weight:500}
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.js"></script>
 <script src="config.js"></script>
 <script src="app.js"></script>
+<script>if("serviceWorker" in navigator){addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>
