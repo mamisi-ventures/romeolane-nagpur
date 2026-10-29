@@ -302,12 +302,12 @@ textarea{resize:vertical;min-height:80px}
 
 
 /* hero photograph */
-.hero{background:linear-gradient(90deg,rgba(11,33,71,.97) 0%,rgba(11,33,71,.88) 45%,rgba(11,33,71,.45) 100%),url(hero.jpg) center/cover no-repeat,var(--charcoal)}
-@media (max-width:820px){.hero{background:linear-gradient(180deg,rgba(11,33,71,.92),rgba(11,33,71,.82)),url(hero.jpg) center/cover no-repeat,var(--charcoal)}}
+.hero{background:linear-gradient(90deg,rgba(11,33,71,.97) 0%,rgba(11,33,71,.88) 45%,rgba(11,33,71,.45) 100%),url(venue-hall.webp) center/cover no-repeat,var(--charcoal)}
+@media (max-width:820px){.hero{background:linear-gradient(180deg,rgba(11,33,71,.92),rgba(11,33,71,.82)),url(venue-hall.webp) center/cover no-repeat,var(--charcoal)}}
 
 /* private events */
 .pe-intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:stretch;margin-bottom:40px}
-.pe-photo{min-height:260px;background:linear-gradient(0deg,rgba(11,33,71,.55),transparent 60%),url(terrace.jpg) center/cover;display:flex;align-items:flex-end;padding:22px;color:var(--ivory)}
+.pe-photo{min-height:260px;background:linear-gradient(0deg,rgba(11,33,71,.55),transparent 60%),url(venue-private-room.webp) center/cover;display:flex;align-items:flex-end;padding:22px;color:var(--ivory)}
 .pe-photo p{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.3;max-width:26ch}
 .pe-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .pe-facts div{border:1px solid var(--line);padding:16px;background:var(--bg-2);min-width:0}
@@ -352,7 +352,7 @@ textarea{resize:vertical;min-height:80px}
 .terms h5{font-family:var(--caps);font-weight:600;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:4px 0 8px}
 
 /* gallery */
-.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:190px;gap:10px}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:190px;grid-auto-flow:dense;gap:10px}
 .gallery figure{margin:0;position:relative;overflow:hidden;background:var(--bg-2);min-width:0}
 .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
 .gallery figure:hover img{transform:scale(1.04)}
@@ -489,7 +489,7 @@ footer .legal strong{color:var(--fg);font-weight:500}
 <main id="main">
   <!-- HERO · night -->
   <section class="hero band dark" style="padding:0" data-view="home">
-    <div class="hero-bg" aria-hidden="true"><img src="hero.jpg" alt="" class="on"><img src="terrace.jpg" alt=""><img src="bar.jpg" alt=""><img src="lounge.jpg" alt=""></div>
+    <div class="hero-bg" aria-hidden="true"><img src="venue-hall.webp" alt="" class="on"><img src="venue-terrace-night.webp" alt=""><img src="venue-backbar.webp" alt=""><img src="venue-dining.webp" alt=""></div>
     <div class="wrap">
       <div>
         <p class="label">Estd. 2019 · Deo Nagar, Nagpur</p>
@@ -532,9 +532,9 @@ footer .legal strong{color:var(--fg);font-weight:500}
         <div class="count" aria-label="Time until doors open"><div><b id="cD">0</b><span>Days</span></div><div><b id="cH">0</b><span>Hours</span></div><div><b id="cM">0</b><span>Min</span></div></div>
       </div>
       <div class="tiles">
-        <a class="tile" href="#reserve"><img src="hero.jpg" alt="" loading="lazy"><h3>Reserve</h3><p>A table for two. The rest is conversation.</p><span class="go">Book a table</span></a>
-        <a class="tile" href="#private"><img src="terrace.jpg" alt="" loading="lazy"><h3>Private events</h3><p>Five packages from ₹2,200 per guest.</p><span class="go">Plan an evening</span></a>
-        <a class="tile" href="#club"><img src="lounge.jpg" alt="" loading="lazy"><h3>Lane Club</h3><p>Points on every bill, a draw every day.</p><span class="go">Enrol</span></a>
+        <a class="tile" href="#reserve"><img src="venue-window-table.webp" alt="" loading="lazy"><h3>Reserve</h3><p>A table for two. The rest is conversation.</p><span class="go">Book a table</span></a>
+        <a class="tile" href="#private"><img src="venue-terrace-night.webp" alt="" loading="lazy"><h3>Private events</h3><p>Five packages from ₹2,200 per guest.</p><span class="go">Plan an evening</span></a>
+        <a class="tile" href="#club"><img src="venue-lounge-sofa.webp" alt="" loading="lazy"><h3>Lane Club</h3><p>Points on every bill, a draw every day.</p><span class="go">Enrol</span></a>
         <a class="tile" href="#menu"><img src="smoke.jpg" alt="" loading="lazy"><h3>The menu</h3><p>Organic cocktails and a considered kitchen.</p><span class="go">Explore</span></a>
       </div>
     </div>
@@ -651,17 +651,24 @@ footer .legal strong{color:var(--fg);font-weight:500}
         <p>Warm rooms, a glass-roofed terrace and a bar built on organic, house-made syrups and cordials.</p>
       </div>
       <div class="gallery">
-        <figure class="g-wide g-tall"><img src="terrace.jpg" alt="The terrace at Romeo Lane with lounge seating under a timber canopy" loading="lazy"><figcaption>The terrace</figcaption></figure>
-        <figure class="g-tall"><img src="lounge.jpg" alt="The indoor lounge with lantern lights and banquettes" loading="lazy"><figcaption>The lounge</figcaption></figure>
+        <figure class="g-wide g-tall"><img src="venue-terrace-night.webp" alt="The Romeo Lane terrace after dark, tables set above the lights of Nagpur" loading="lazy"><figcaption>The terrace after dark</figcaption></figure>
+        <figure class="g-tall"><img src="venue-hall-tall.webp" alt="The main room under blue glass lanterns, with an arched window to the city" loading="lazy"><figcaption>The main room</figcaption></figure>
         <figure><img src="smoke.jpg" alt="A cocktail served over smoking dry ice" loading="lazy"><figcaption>The bar</figcaption></figure>
+        <figure><img src="venue-backbar.webp" alt="The back bar with spirits lined up beneath an arched window" loading="lazy"><figcaption>The back bar</figcaption></figure>
+        <figure class="g-wide"><img src="venue-dining.webp" alt="Dining tables beneath the lantern ceiling" loading="lazy"><figcaption>Under the lanterns</figcaption></figure>
         <figure><img src="nest.jpg" alt="A cocktail garnished with a dried flower, served in a nest" loading="lazy"><figcaption>Organic cocktails</figcaption></figure>
-        <figure class="g-wide"><img src="spread.jpg" alt="A spread of plated dishes on blue-and-white crockery" loading="lazy"><figcaption>The kitchen</figcaption></figure>
         <figure class="g-tall"><img src="chef.jpg" alt="The chef presenting a plated dish" loading="lazy"><figcaption>From the chef</figcaption></figure>
-        <figure><img src="bar.jpg" alt="The circular bar counter" loading="lazy"><figcaption>The bar counter</figcaption></figure>
+        <figure><img src="venue-lounge-sofa.webp" alt="A round lounge sofa with cushions on the terrace" loading="lazy"><figcaption>The lounge</figcaption></figure>
+        <figure class="g-wide"><img src="venue-private-room.webp" alt="The private dining room with a long table and arched shelves" loading="lazy"><figcaption>The private room</figcaption></figure>
         <figure><img src="blue.jpg" alt="A blue cocktail being finished with a flame" loading="lazy"><figcaption>Finished at the table</figcaption></figure>
+        <figure class="g-wide"><img src="spread.jpg" alt="A spread of plated dishes on blue-and-white crockery" loading="lazy"><figcaption>The kitchen</figcaption></figure>
+        <figure><img src="venue-balcony.webp" alt="Seating along the glass balcony, looking out over the city" loading="lazy"><figcaption>Above Ajni Square</figcaption></figure>
+        <figure><img src="venue-window-table.webp" alt="A table for six by the window in daylight" loading="lazy"><figcaption>A table by the window</figcaption></figure>
+        <figure class="g-wide"><img src="venue-ceiling.webp" alt="Looking up at the lantern ceiling and the mezzanine" loading="lazy"><figcaption>Look up</figcaption></figure>
         <figure class="g-wide"><img src="tacos.jpg" alt="Bao tacos served on a wooden stand" loading="lazy"><figcaption>Small plates</figcaption></figure>
         <figure><img src="coupe.jpg" alt="A red cocktail in a gold coupe" loading="lazy"><figcaption>Signatures</figcaption></figure>
-        <figure><img src="sign.jpg" alt="The Romeo Lane sign set into the canopy" loading="lazy"><figcaption>Estd. 2019</figcaption></figure>
+        <figure><img src="venue-staircase.webp" alt="The lit staircase with a framed floral painting" loading="lazy"><figcaption>The stair</figcaption></figure>
+        <figure><img src="venue-sign-niche.webp" alt="The Romeo Lane neon sign in a lit niche" loading="lazy"><figcaption>Estd. 2019</figcaption></figure>
       </div>
     </div>
   </section>
