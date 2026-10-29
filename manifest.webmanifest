@@ -1,0 +1,74 @@
+{
+  "id": "/",
+  "name": "Romeo Lane Nagpur",
+  "short_name": "Romeo Lane",
+  "description": "Reserve a table, book events and party packages, join the Lane Club and see what's on at Romeo Lane, Ajni Square, Nagpur.",
+  "start_url": "/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0F2C5F",
+  "theme_color": "#0F2C5F",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": [
+    "food",
+    "lifestyle",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Reserve a table",
+      "short_name": "Reserve",
+      "url": "/?source=app#reserve",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Lane Club",
+      "short_name": "Lane Club",
+      "url": "/?source=app#club",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "This week",
+      "short_name": "This week",
+      "url": "/?source=app#events",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
