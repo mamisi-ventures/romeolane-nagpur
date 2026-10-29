@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.romeolanenagpur.app",
+        "sha256_cert_fingerprints": ["C2:17:8A:CC:CA:EE:C2:5F:E5:DF:41:36:B7:69:C6:BB:1E:46:33:3F:FF:95:F9:A3:A1:21:23:A0:C7:BB:19:AC"]
+      }
+    }]
